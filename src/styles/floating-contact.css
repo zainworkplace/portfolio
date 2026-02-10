@@ -1,0 +1,200 @@
+.floatingContactContainer {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 40;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+}
+
+.floatingContactBtn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--primary-gradient);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 8px 32px rgba(102, 126, 234, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 41;
+  animation: pulse-float 3s ease-in-out infinite;
+}
+
+.contactIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  color: white;
+}
+
+@keyframes pulse-float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 
+      0 8px 32px rgba(102, 126, 234, 0.4),
+      0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 
+      0 12px 40px rgba(102, 126, 234, 0.5),
+      0 0 0 1px rgba(255, 255, 255, 0.15);
+  }
+}
+
+.floatingContactBtn:hover {
+  transform: scale(1.15) translateY(-5px);
+  box-shadow: 
+    0 16px 48px rgba(102, 126, 234, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+  animation: none;
+}
+
+.floatingContactBtn.open {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  animation: none;
+}
+
+.floatingContactBtn.open .contactIcon {
+  transform: rotate(180deg);
+}
+
+.contactIcon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.floatingMenu {
+  position: absolute;
+  bottom: 85px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(20px);
+}
+
+.floatingMenu.open {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.floatingOption {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.floatingOption svg {
+  position: relative;
+  z-index: 1;
+}
+
+.floatingOption::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.floatingOption:hover::before {
+  opacity: 1;
+}
+
+.floatingOption.email {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.floatingOption.whatsapp {
+  background: linear-gradient(135deg, #25d366 0%, #1ea952 100%);
+}
+
+.floatingOption.linkedin {
+  background: linear-gradient(135deg, #0077b5 0%, #004e7a 100%);
+}
+
+.floatingOption.github {
+  background: linear-gradient(135deg, #24292e 0%, #1a1e22 100%);
+}
+
+.floatingOption:hover {
+  transform: translateX(-8px) translateY(-5px) scale(1.15);
+  box-shadow: 
+    0 12px 32px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.floatingOption.email:hover {
+  box-shadow: 
+    0 12px 32px rgba(102, 126, 234, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.floatingOption.whatsapp:hover {
+  box-shadow: 
+    0 12px 32px rgba(37, 211, 102, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.floatingOption.linkedin:hover {
+  box-shadow: 
+    0 12px 32px rgba(0, 119, 181, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.floatingOption.github:hover {
+  box-shadow: 
+    0 12px 32px rgba(36, 41, 46, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .floatingContactContainer {
+    bottom: 24px;
+    right: 24px;
+  }
+
+  .floatingContactBtn {
+    width: 58px;
+    height: 58px;
+    font-size: 24px;
+  }
+
+  .floatingOption {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+  
+  .floatingOption:hover {
+    transform: translateX(-6px) translateY(-3px) scale(1.1);
+  }
+}
