@@ -3,6 +3,7 @@ import "../styles/navbar.css";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const baseUrl = import.meta.env.BASE_URL;
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -42,7 +43,7 @@ export default function Navbar() {
           <a href="#projects" onClick={closeMenu}>
             Projects
           </a>
-          <a href="/resume.pdf" download onClick={closeMenu}>
+          <a href={`${baseUrl}resume.pdf`} download onClick={closeMenu}>
             Resume
           </a>
           <a className="cta" href="#contact" onClick={closeMenu}>

@@ -1,6 +1,8 @@
 import "../styles/hero.css";
 
 export default function Hero() {
+  const baseUrl = import.meta.env.BASE_URL;
+
   return (
     <section id="home" className="hero">
       <div className="heroInner">
@@ -31,7 +33,7 @@ export default function Hero() {
                 Contact Me
               </a>
 
-              <a className="btnSecondary" href="/resume.pdf" download>
+              <a className="btnSecondary" href={`${baseUrl}resume.pdf`} download>
                 Download Resume (PDF)
               </a>
 
@@ -55,7 +57,7 @@ export default function Hero() {
 
           <div className="heroImage">
             <img
-              src="/profile.jpg"
+              src={`${baseUrl}profile.jpg`}
               alt="Zain Ul Abdin"
               className="profilePic"
             />

@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import "../styles/projects.css";
 import ProjectModal from "./ProjectModal";
 
+const withBase = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+
 const projects = [
   {
     title: "Inventory Management System",
@@ -11,16 +13,16 @@ const projects = [
     live: "https://factory-omzr.onrender.com/login#master-data",
     github: "https://github.com/zainworkplace",
     screenshots: [
-      "/projects/inventory/1.png",
-      "/projects/inventory/2.png",
-      "/projects/inventory/3.png",
-      "/projects/inventory/4.png",
-      "/projects/inventory/5.png",
-      "/projects/inventory/6.png",
-      "/projects/inventory/7.png",
-      "/projects/inventory/8.png",
-      "/projects/inventory/9.png",
-      "/projects/inventory/10.png",
+      withBase("/projects/inventory/1.png"),
+      withBase("/projects/inventory/2.png"),
+      withBase("/projects/inventory/3.png"),
+      withBase("/projects/inventory/4.png"),
+      withBase("/projects/inventory/5.png"),
+      withBase("/projects/inventory/6.png"),
+      withBase("/projects/inventory/7.png"),
+      withBase("/projects/inventory/8.png"),
+      withBase("/projects/inventory/9.png"),
+      withBase("/projects/inventory/10.png"),
     ],
     details: {
       overview:
@@ -48,11 +50,11 @@ const projects = [
     live: "https://react-blog-template.vercel.app/",
     github: "https://github.com/zainworkplace",
     screenshots: [
-      "/projects/blog/1.png",
-      "/projects/blog/2.png",
-      "/projects/blog/3.png",
-      "/projects/blog/4.png",
-      "/projects/blog/5.png",
+      withBase("/projects/blog/1.png"),
+      withBase("/projects/blog/2.png"),
+      withBase("/projects/blog/3.png"),
+      withBase("/projects/blog/4.png"),
+      withBase("/projects/blog/5.png"),
     ],
     details: {
       overview:
@@ -84,13 +86,13 @@ const projects = [
     live: "https://youtube.com/watch?v=TRyzr3jId34&feature=youtu.be",
     github: "https://github.com/zainworkplace",
     screenshots: [
-      "/projects/ecommerce/1.png",
-      "/projects/ecommerce/2.png",
-      "/projects/ecommerce/3.png",
-      "/projects/ecommerce/4.png",
-      "/projects/ecommerce/5.png",
-      "/projects/ecommerce/6.png",
-      "/projects/ecommerce/7.png",
+      withBase("/projects/ecommerce/1.png"),
+      withBase("/projects/ecommerce/2.png"),
+      withBase("/projects/ecommerce/3.png"),
+      withBase("/projects/ecommerce/4.png"),
+      withBase("/projects/ecommerce/5.png"),
+      withBase("/projects/ecommerce/6.png"),
+      withBase("/projects/ecommerce/7.png"),
     ],
     details: {
       overview:
@@ -119,11 +121,11 @@ const projects = [
     live: "https://nsnejjbr.manus.space/",
     github: "https://github.com/zainworkplace",
     screenshots: [
-      "/projects/health-blog/1.png",
-      "/projects/health-blog/2.png",
-      "/projects/health-blog/3.png",
-      "/projects/health-blog/4.png",
-      "/projects/health-blog/5.png",
+      withBase("/projects/health-blog/1.png"),
+      withBase("/projects/health-blog/2.png"),
+      withBase("/projects/health-blog/3.png"),
+      withBase("/projects/health-blog/4.png"),
+      withBase("/projects/health-blog/5.png"),
     ],
     details: {
       overview:
@@ -152,12 +154,12 @@ const projects = [
     live: "https://fence-chief-07913711.figma.site/",
     github: "https://github.com/zainworkplace",
     screenshots: [
-      "/projects/hrms/1.png",
-      "/projects/hrms/2.png",
-      "/projects/hrms/3.png",
-      "/projects/hrms/4.png",
-      "/projects/hrms/5.png",
-      "/projects/hrms/6.png",
+      withBase("/projects/hrms/1.png"),
+      withBase("/projects/hrms/2.png"),
+      withBase("/projects/hrms/3.png"),
+      withBase("/projects/hrms/4.png"),
+      withBase("/projects/hrms/5.png"),
+      withBase("/projects/hrms/6.png"),
     ],
     details: {
       overview:

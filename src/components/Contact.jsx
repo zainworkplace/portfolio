@@ -1,6 +1,8 @@
 import "../styles/contact.css";
 
 export default function Contact() {
+  const baseUrl = import.meta.env.BASE_URL;
+
   return (
     <div className="contactGrid">
       <div className="card">
@@ -62,7 +64,7 @@ export default function Contact() {
         </a>
 
         <div style={{ marginTop: 10 }}>
-          <a className="btnSecondary" href="/resume.pdf" download>
+          <a className="btnSecondary" href={`${baseUrl}resume.pdf`} download>
             Download Resume (PDF)
           </a>
         </div>
