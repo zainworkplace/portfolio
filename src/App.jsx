@@ -6,6 +6,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import FloatingContactBtn from "./components/FloatingContactBtn";
+import Footer from "./components/Footer";
 
 import "./styles/app.css";
 
@@ -37,6 +38,8 @@ export default function App() {
           <Contact />
         </Section>
       </main>
+
+      <Footer />
 
       <FloatingContactBtn />
     </div>
